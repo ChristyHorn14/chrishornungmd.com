@@ -6,7 +6,7 @@ A lightweight professional portfolio for surgical education, clinical research, 
 
 GitHub Pages publishes `main` from `/ (root)`. No dependencies, build step, backend, analytics, cookies, or third-party fonts. Every commit to main automatically redeploys. `.nojekyll` ensures files are served directly.
 
-Temporary URL: https://christyhorn14.github.io/chrishornungmd.com/
+URL: chrishornungmd.com
 
 ## Local preview
 
@@ -30,34 +30,4 @@ Read-only references reviewed on September 19, 2026:
 
 No TI-RADS repository was found in the account's 14-repository listing. Its description and In Development status follow the owner's brief. The bio, affiliation, and five research areas come directly from that brief. No publications, results, collaborators or statistics have been inferred. The card illustrations are original decorative CSS graphics, not diagnostic images. Rounded elements and case-based learning language subtly connect the site to the existing Dojo tools. No source app files or settings were changed.
 
-## Connect chrishornungmd.com later
-
-`CNAME.example` contains the intended domain but deliberately is not an active `CNAME`: activating it now would redirect the working temporary URL before DNS is ready. No Cloudflare changes have been made.
-
-When ready, follow this order:
-
-1. Optionally verify ownership using GitHub account Settings → Pages; use the exact TXT value GitHub supplies.
-2. In **this repository** Settings → Pages, save `chrishornungmd.com` as Custom domain. GitHub creates the active CNAME file when publishing from a branch. Alternatively rename `CNAME.example` to `CNAME` and confirm the setting.
-3. In Cloudflare, configure these records, initially **DNS only** (gray cloud), TTL Auto:
-
-| Type | Name | Value |
-| --- | --- | --- |
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | ChristyHorn14.github.io |
-
-Replace conflicting web A/AAAA/CNAME records for @ or www only after checking their purpose; preserve mail and unrelated records. The www target contains no repository path. Optional IPv6 AAAA values for @ are `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, and `2606:50c0:8003::153`.
-
-4. Once GitHub validates DNS and provisions a certificate, enable **Enforce HTTPS**. DNS and certificate provisioning may take up to 24 hours.
-5. Replace `https://christyhorn14.github.io/chrishornungmd.com/` with `https://chrishornungmd.com/` in index.html (canonical, og:url, og:image), sitemap.xml, robots.txt and 404.html. Relative CSS/icon links already work on both hosts.
-6. Verify apex HTTPS, www redirect, social image, navigation, and both existing app links.
-
-Official reference: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
-
-Future staging, mohs and tirads subdomains remain unconfigured. Add each domain to its own hosting project and use that provider's verified DNS instructions at that time; no application migration is necessary.
-
-## Validation
-
-Local desktop visual review, 390px and 320px viewport overflow checks, keyboard-visible skip-link focus, internal anchor checks, and both live app destinations were checked before deployment. This is a static page with no client JavaScript. Content remains available without scripts or external services.
+ or external services.
