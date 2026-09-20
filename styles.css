@@ -912,3 +912,76 @@ footer a span {
         min-height: 220px
     }
 }
+
+.crabs-release {
+    margin: 0 0 28px
+}
+
+.release-date {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 6px
+}
+
+.release-counts {
+    font-size: 18px;
+    margin: 0 0 16px
+}
+
+.release-details {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-size: 13px
+}
+
+.release-details summary {
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+    padding-block: 14px
+}
+
+.release-details summary:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px
+}
+
+.release-details summary:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px
+}
+
+.release-body {
+    padding-bottom: 18px;
+    color: var(--muted)
+}
+
+.release-body h3,
+.release-body h4 {
+    color: var(--ink);
+    font-size: 13px;
+    margin: 0 0 8px
+}
+
+.release-body ul {
+    padding-left: 20px;
+    margin: 0 0 20px
+}
+
+.release-body li + li {
+    margin-top: 8px
+}
+
+.release-history-entry {
+    margin-top: 12px
+}
+
+.release-history-entry p {
+    margin: 0 0 12px
+}
+
+.release-body .release-note {
+    margin: 18px 0 0;
+    font-size: 12px
+}
