@@ -4,7 +4,7 @@ A lightweight professional portfolio for surgical education, clinical research, 
 
 ## Hosting
 
-GitHub Pages publishes `main` from `/ (root)`. No dependencies, build step, backend, analytics, cookies, or third-party fonts. Every commit to main automatically redeploys. `.nojekyll` ensures files are served directly.
+GitHub Pages publishes `main` from `/ (root)`. No frontend dependencies, backend, analytics, cookies, or third-party fonts. Crabs uses a Python standard-library static build. Every commit to main automatically redeploys. `.nojekyll` ensures files are served directly.
 
 Temporary URL: https://christyhorn14.github.io/chrishornungmd.com/
 
@@ -30,9 +30,9 @@ Read-only references reviewed on September 19, 2026:
 
 No TI-RADS repository was found in the account's 14-repository listing. Its description and In Development status follow the owner's brief. The bio, affiliation, and five research areas come directly from that brief. No publications, results, collaborators or statistics have been inferred. The card illustrations are original decorative CSS graphics, not diagnostic images. Rounded elements and case-based learning language subtly connect the site to the existing Dojo tools. No source app files or settings were changed.
 
-## Connect chrishornungmd.com later
+## Domain configuration (historical setup reference)
 
-`CNAME.example` contains the intended domain but deliberately is not an active `CNAME`: activating it now would redirect the working temporary URL before DNS is ready. No Cloudflare changes have been made.
+The checkout now contains an active `CNAME` for `chrishornungmd.com`, and page canonicals use that domain. The following is the original setup reference, not an instruction to repeat completed DNS changes. No DNS settings are modified by the Crabs build.
 
 When ready, follow this order:
 
@@ -60,24 +60,36 @@ Future staging, mohs and tirads subdomains remain unconfigured. Add each domain 
 
 ## Validation
 
-Local desktop visual review, 390px and 320px viewport overflow checks, keyboard-visible skip-link focus, internal anchor checks, and both live app destinations were checked before deployment. This is a static page with no client JavaScript. Content remains available without scripts or external services.
+Local desktop visual review, 390px and 320px viewport overflow checks, keyboard-visible skip-link focus, internal anchor checks, and both live app destinations were checked before deployment. The homepage is static; the Crabs child page progressively enhances its tag explorer with JavaScript. Content remains available without scripts or external services.
 
-## Crabs release updates
+## Crabs documentation and release builds
 
-The Crabs section is generated into `index.html` between the `GENERATED CRABS RELEASES` markers. It stays available without JavaScript, including the native expandable What’s New / release history. The importer uses only published releases and an explicit allowlist of dates, totals, and reviewed `whats_new` text; audit and compatibility fields are excluded. No raw source JSON is hosted or duplicated. The general import note follows the generated public `website/whats-new.md`; review it if that public guidance changes.
+The homepage stays the portfolio. Substantial projects can use a directory with an `index.html`; Crabs is the first, at `/crabs/`. Relative assets/navigation also work under the temporary GitHub project path. Shared typography/colors remain in `styles.css`, with page-specific rules in `crabs/crabs.css`.
 
-For each release:
+Source of truth: `.apkg` → CrabsChangeLog → generated public JSON/Markdown → this static site. No counts, hierarchy or release history are maintained in the template. No Anki package, raw educational notes, audit or media archive is copied here.
 
-1. Run the CrabsChangeLog release tool against the old and new packages.
-2. Review the generated public wording and test the update in Anki.
-3. Mark the reviewed release published in CrabsChangeLog.
-4. From this website repository, import the generated public data:
+From the CrabsChangeLog repository, use the documented `release_workflow.py ... --website /path/to/chrishornungmd.com` command. Candidate releases are reviewed there; the website stays on its last published bundle. After review/distribution, mark published using that command's `--publication-status published` option.
 
-   ```sh
-   python3 scripts/update_crabs_release.py /path/to/CrabsChangeLog/website/releases.json
-   python3 scripts/update_crabs_release.py /path/to/CrabsChangeLog/website/releases.json --check
-   ```
+To import separately:
 
-5. Preview with `python3 -m http.server 8000`, check desktop/mobile and expand the history, then review the diff. No build or TypeScript step is required. Commit and deploy only after approval.
+```sh
+python3 scripts/update_crabs_release.py /path/to/CrabsChangeLog/website/releases.json
+python3 scripts/update_crabs_release.py /path/to/CrabsChangeLog/website/releases.json --check
+python3 -m unittest discover -s tests -v
+```
 
-Do not hand-edit the generated block. The latest published release is selected by date; older published entries automatically appear in history. Draft releases are ignored. Review public wording before importing it: the importer escapes HTML but preserves the source text. The existing Access the deck Google Form URL must remain unchanged; its submission confirmation supplies the download link.
+The source must have sibling `deck-stats.json`, `tags.json`, `how-to-use.md`, and `updating.md`. The importer validates matching release dates, totals and hierarchy, and rejects candidate bundles. Older history without tag changes means unavailable, not zero.
+
+For an offline rebuild from the last imported bundle:
+
+```sh
+python3 scripts/update_crabs_release.py crabs/data/releases.json
+```
+
+Generated: `crabs/index.html`, `crabs/data/*`, and the marked release block in homepage `index.html`. Human-maintained: `templates/crabs.html`, `crabs/crabs.css`, `crabs/explorer.js`, and the importer/tests. Usage/update prose belongs in CrabsChangeLog's `docs/` directory. Supported Markdown: headings, paragraphs, single-level bullets, inline code and HTTPS links. Text is escaped; raw HTML is not executed.
+
+The native collapsed `details` tree and all documentation work without JavaScript. `explorer.js` adds literal path search, result announcements and collapse-all. The full tree is rendered from JSON at build time; no network request is needed at runtime. Search clears back to the user's previous expanded state. Counts are branch totals, not filtered search totals.
+
+Preview with `python3 -m http.server 8000`, then open `/` and `/crabs/`. Review mobile layout, keyboard expansion/search, and both Git diffs. This is a Python static build, with no npm dependency or app framework. Importing never commits or deploys. Pushing the publishing branch will still trigger the existing GitHub Pages deployment.
+
+The existing Google Form URL is preserved and read from the homepage during build. It currently uses a Google Forms `/edit` URL; verify respondent access before deciding whether to replace it with a public responder URL. No download-access behavior was changed.

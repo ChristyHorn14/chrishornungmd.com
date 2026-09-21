@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.crabs-*
+*.[aA][pP][kK][gG]
+*.[cC][oO][lL][pP][kK][gG]
+*.anki2*
+*.anki21*
+*.sqlite*
+node_modules/
