@@ -7,14 +7,14 @@
     "leech",
     "marked"
   ],
-  "release_date": "2026-09-20",
+  "release_date": "2026-09-21",
   "release_date_source": "release_argument",
   "schema": 1,
-  "total_cards": 5653,
-  "total_media": 3063,
+  "total_cards": 5586,
+  "total_media": 3016,
   "total_note_types": 8,
-  "total_notes": 4275,
-  "total_tag_nodes": 621,
-  "total_tags": 580,
-  "untagged_notes": 28
+  "total_notes": 4224,
+  "total_tag_nodes": 604,
+  "total_tags": 564,
+  "untagged_notes": 0
 }

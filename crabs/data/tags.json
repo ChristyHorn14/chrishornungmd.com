@@ -1,18 +1,7 @@
 {
   "count_unit": "notes_and_cards",
-  "release_date": "2026-09-20",
+  "release_date": "2026-09-21",
   "roots": [
-    {
-      "aggregate_cards": 1,
-      "aggregate_notes": 1,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 1,
-      "direct_notes": 1,
-      "explicit": true,
-      "name": "Anatomy",
-      "path": "Anatomy"
-    },
     {
       "aggregate_cards": 5586,
       "aggregate_notes": 4224,
@@ -2304,12 +2293,12 @@
           "path": "Crabs::Procedures"
         },
         {
-          "aggregate_cards": 4528,
-          "aggregate_notes": 3388,
+          "aggregate_cards": 4581,
+          "aggregate_notes": 3440,
           "children": [
             {
-              "aggregate_cards": 414,
-              "aggregate_notes": 315,
+              "aggregate_cards": 427,
+              "aggregate_notes": 328,
               "children": [
                 {
                   "aggregate_cards": 1,
@@ -2334,12 +2323,12 @@
                   "path": "Crabs::Residency::FacialPlastics::Alopecia"
                 },
                 {
-                  "aggregate_cards": 18,
-                  "aggregate_notes": 14,
+                  "aggregate_cards": 30,
+                  "aggregate_notes": 26,
                   "children": [],
                   "depth": 3,
-                  "direct_cards": 18,
-                  "direct_notes": 14,
+                  "direct_cards": 30,
+                  "direct_notes": 26,
                   "explicit": true,
                   "name": "Anatomy",
                   "path": "Crabs::Residency::FacialPlastics::Anatomy"
@@ -2822,12 +2811,12 @@
                   "path": "Crabs::Residency::FacialPlastics::ProminentEar"
                 },
                 {
-                  "aggregate_cards": 44,
-                  "aggregate_notes": 36,
+                  "aggregate_cards": 45,
+                  "aggregate_notes": 37,
                   "children": [],
                   "depth": 3,
-                  "direct_cards": 44,
-                  "direct_notes": 36,
+                  "direct_cards": 45,
+                  "direct_notes": 37,
                   "explicit": true,
                   "name": "Rhinoplasty",
                   "path": "Crabs::Residency::FacialPlastics::Rhinoplasty"
@@ -3830,9 +3819,20 @@
               "path": "Crabs::Residency::Intern"
             },
             {
-              "aggregate_cards": 121,
-              "aggregate_notes": 99,
+              "aggregate_cards": 126,
+              "aggregate_notes": 103,
               "children": [
+                {
+                  "aggregate_cards": 5,
+                  "aggregate_notes": 4,
+                  "children": [],
+                  "depth": 3,
+                  "direct_cards": 5,
+                  "direct_notes": 4,
+                  "explicit": true,
+                  "name": "Anatomy",
+                  "path": "Crabs::Residency::Laryngology::Anatomy"
+                },
                 {
                   "aggregate_cards": 10,
                   "aggregate_notes": 7,
@@ -4183,12 +4183,12 @@
               "path": "Crabs::Residency::Laryngology"
             },
             {
-              "aggregate_cards": 813,
-              "aggregate_notes": 620,
+              "aggregate_cards": 860,
+              "aggregate_notes": 667,
               "children": [
                 {
-                  "aggregate_cards": 374,
-                  "aggregate_notes": 331,
+                  "aggregate_cards": 421,
+                  "aggregate_notes": 378,
                   "children": [
                     {
                       "aggregate_cards": 219,
@@ -4225,8 +4225,8 @@
                     }
                   ],
                   "depth": 3,
-                  "direct_cards": 62,
-                  "direct_notes": 51,
+                  "direct_cards": 109,
+                  "direct_notes": 98,
                   "explicit": true,
                   "name": "Anatomy",
                   "path": "Crabs::Residency::Otology::Anatomy"
@@ -6706,197 +6706,9 @@
       "explicit": true,
       "name": "Crabs",
       "path": "Crabs"
-    },
-    {
-      "aggregate_cards": 1,
-      "aggregate_notes": 1,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 1,
-      "direct_notes": 1,
-      "explicit": true,
-      "name": "Severe",
-      "path": "Severe"
-    },
-    {
-      "aggregate_cards": 52,
-      "aggregate_notes": 51,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 52,
-      "direct_notes": 51,
-      "explicit": true,
-      "name": "anat",
-      "path": "anat"
-    },
-    {
-      "aggregate_cards": 1,
-      "aggregate_notes": 1,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 1,
-      "direct_notes": 1,
-      "explicit": true,
-      "name": "appearance",
-      "path": "appearance"
-    },
-    {
-      "aggregate_cards": 1,
-      "aggregate_notes": 1,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 1,
-      "direct_notes": 1,
-      "explicit": true,
-      "name": "include",
-      "path": "include"
-    },
-    {
-      "aggregate_cards": 1,
-      "aggregate_notes": 1,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 1,
-      "direct_notes": 1,
-      "explicit": true,
-      "name": "symptoms",
-      "path": "symptoms"
-    },
-    {
-      "aggregate_cards": 1,
-      "aggregate_notes": 1,
-      "children": [],
-      "depth": 0,
-      "direct_cards": 1,
-      "direct_notes": 1,
-      "explicit": true,
-      "name": "toxic",
-      "path": "toxic"
-    },
-    {
-      "aggregate_cards": 23,
-      "aggregate_notes": 23,
-      "children": [
-        {
-          "aggregate_cards": 1,
-          "aggregate_notes": 1,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 1,
-          "direct_notes": 1,
-          "explicit": true,
-          "name": "CranioOrbitalFractures",
-          "path": "…::CranioOrbitalFractures"
-        },
-        {
-          "aggregate_cards": 22,
-          "aggregate_notes": 22,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 22,
-          "direct_notes": 22,
-          "explicit": true,
-          "name": "Plastics",
-          "path": "…::Plastics"
-        },
-        {
-          "aggregate_cards": 22,
-          "aggregate_notes": 22,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 22,
-          "direct_notes": 22,
-          "explicit": true,
-          "name": "PlasticsTrauma",
-          "path": "…::PlasticsTrauma"
-        },
-        {
-          "aggregate_cards": 22,
-          "aggregate_notes": 22,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 22,
-          "direct_notes": 22,
-          "explicit": true,
-          "name": "Residency",
-          "path": "…::Residency"
-        },
-        {
-          "aggregate_cards": 22,
-          "aggregate_notes": 22,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 22,
-          "direct_notes": 22,
-          "explicit": true,
-          "name": "Rhinoplasty",
-          "path": "…::Rhinoplasty"
-        },
-        {
-          "aggregate_cards": 22,
-          "aggregate_notes": 22,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 22,
-          "direct_notes": 22,
-          "explicit": true,
-          "name": "Rhinoplasty_And_Nasal_Reconstruction",
-          "path": "…::Rhinoplasty_And_Nasal_Reconstruction"
-        },
-        {
-          "aggregate_cards": 1,
-          "aggregate_notes": 1,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 1,
-          "direct_notes": 1,
-          "explicit": true,
-          "name": "Trauma",
-          "path": "…::Trauma"
-        },
-        {
-          "aggregate_cards": 1,
-          "aggregate_notes": 1,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 1,
-          "direct_notes": 1,
-          "explicit": true,
-          "name": "ZygomaticomaxillaryandOrbitalFractures",
-          "path": "…::ZygomaticomaxillaryandOrbitalFractures"
-        },
-        {
-          "aggregate_cards": 23,
-          "aggregate_notes": 23,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 23,
-          "direct_notes": 23,
-          "explicit": true,
-          "name": "elective",
-          "path": "…::elective"
-        },
-        {
-          "aggregate_cards": 1,
-          "aggregate_notes": 1,
-          "children": [],
-          "depth": 1,
-          "direct_cards": 1,
-          "direct_notes": 1,
-          "explicit": true,
-          "name": "facial_trauma",
-          "path": "…::facial_trauma"
-        }
-      ],
-      "depth": 0,
-      "direct_cards": 0,
-      "direct_notes": 0,
-      "explicit": false,
-      "name": "…",
-      "path": "…"
     }
   ],
   "schema": 1,
-  "total_nodes": 621,
-  "total_tags": 580
+  "total_nodes": 604,
+  "total_tags": 564
 }
