@@ -1,0 +1,42 @@
+<!doctype html>
+$marker
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <meta name="theme-color" content="#f7f6f2">
+  <link rel="canonical" href="$canonical">
+  <meta property="og:type" content="$og_type">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$description">
+  <meta property="og:url" content="$canonical">
+  <meta property="og:image" content="$social_image">
+  <meta property="og:image:alt" content="$social_image_alt">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="$title">
+  <meta name="twitter:description" content="$description">
+  <meta name="twitter:image" content="$social_image">
+  <meta name="twitter:image:alt" content="$social_image_alt">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog/blog.css">
+$extra_metadata
+</head>
+<body class="blog-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="wordmark" href="/" aria-label="Chris Hornung, MD — home"><span>Chris Hornung<span class="credential">, MD</span></span></a>
+    <nav aria-label="Main navigation"><a href="/#anki">Anki</a><a href="/#tools">Tools</a><a href="/blog/" aria-current="true">Blog</a><a href="/#about">About</a></nav>
+  </header>
+  <main id="main" class="wrap blog-main">
+$content
+  </main>
+  <footer class="wrap blog-footer">
+    <p>Chris Hornung, MD</p><span>Otolaryngology. Education. Tools.</span>
+    <a href="/blog/">Back to Blog</a><a href="/">Home</a>
+  </footer>
+$analytics
+</body>
+</html>
